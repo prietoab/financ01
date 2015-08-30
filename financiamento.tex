@@ -36,8 +36,8 @@ Para encontrar a equação desse tipo de empréstimo podemos começar escrevendo com
 \hline		
 						 0 & $S(0) = C_0$ & $> 0$ \\
 						 1 & $S(1) = C_0(1+T) - p$ & $> 0$ \\
-						 2 & $S(2) = [C_0(1+T) - p](1+T) - p$ &  $> 0$ \\
-						 3 & $S(3) = {[C_0(1+T) - p](1+T) - p}(1+T) - p$ &  $> 0$ \\
+						 2 & $S(2) = (C_0(1+T) - p)(1+T) - p$ &  $> 0$ \\
+						 3 & $S(3) = [(C_0(1+T) - p)(1+T) - p](1+T) - p$ &  $> 0$ \\
 		\end{tabular}  
 	\end{table}
 \end{center}
@@ -128,6 +128,22 @@ S(n) = C_0(1+T)^n - \frac{p}{T}[(1 + T)^n - 1] = 0
 		\end{tabular}  
 	\end{table}
 \end{center}
+
+\section{Equação para a parcela $p$}
+
+Basta isolar $p$ na equação \ref{SnNulo}:
+
+\begin{equation}\label{eqP}
+p = \frac{C_0T(1+T)^n}{(1+T)^n - 1}
+\end{equation}
+
+\section{Equação para a taxa de juros $T$}
+
+Outro problema de ordem muito prática no dia a dia é o seguinte: suponha um empréstimo já realizado, com valor emprestado $C_0$, dividido em parcelas iguais e constantes $p$, durante $n$ meses. Qual foi a taxa de juros $T$ aplicada?
+
+Bastaria, a princípio, reescrever a equação \ref{SnNulo} de modo a isolar $C_0$. Porém, a equação é trancendental, ou seja, não é possível isolar $C_0$. A única maneira é resolvê-la para $C_0$ utilizando métodos numéricos.
+
+
 
 
 \end{document}
