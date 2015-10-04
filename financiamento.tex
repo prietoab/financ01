@@ -14,15 +14,34 @@
 \begin{document}
 \baselineskip 0.6 cm
 
-\title{\textbf{Empréstimo com taxa de juros e parcela constantes}}
+\title{\textbf{Empréstimo com taxa de juros e parcela constantes: produto, modelagem matemática e solução numérica}}
 \author{Adriano Batista Prieto\footnote{\texttt{adrianoprieto@yahoo.com.br}}}
+\date{01/10/2015}
 \maketitle
 
 %\thispagestyle{empty}
 
-Cliente emprestou $C_0$, para pagar com parcelas constantes $p$, durante $n$ meses, a uma taxa mensal, também constante, de $T$\% ao mês.
+\section{Introdução}
 
-\section{Equação: saldo devedor}
+A criação desse artigo surgiu de um convite do Prof. Paulo Assis, do Departamento de Física da Universidade Federal de Goiás, campus Catalão. Desde $2009$ tenho divulgado o papel do físico no mercado de trabalho\footnote{Veja, por exemplo, palestra no I Encontro Nacional de Física na Indústria (2013): \textsc{https://www.youtube.com/watch?v=t$\_$zBX15e1H0}.}, e o Prof. Paulo
+
+\textbf{Definição}: cliente emprestou $C_0$ reais, para pagar com parcelas constantes $p$, durante $n$ meses, a uma taxa mensal, também constante, de $T$\% ao mês.
+
+O problema geral que apresentarei aqui é, para um empréstimo, fixadas três variáveis, obter a quarta. Apesar de simples, ele tem implicações práticas relevantes, tanto para quem fornece quanto para quem toma o empréstimo (instituições financeiras e clientes). Com excessão do conceito de juros, não é necessário conhecimento prévio de matemática financeira.
+
+Esse modelo foi desenvolvido de maneira semelhante aos encontrados nos livros de Física em nível de graduação. O foco é mostrar como a metodologia científica comumente encontrada na Física pode ser aplicada a um problema prático do mercado financeiro. Portanto, apesar do foco aqui estar nos físicos, acredito que que qualquer estudante de ciências exatas no ensino superior sinta-se confortável ao ler esse texto, especialmente os familiarizados com séries de potência e métodos numéricos.
+
+É importante frizar que os modelos e algoritmos utilizados no dia-a-dia das instituições financeiras são muito mais complexos, desafiadores e divertidos.
+
+Pré-requisitos:
+
+\begin{enumerate}
+	\item Juros
+	\item Séries de potência
+	\item Métodos numéricos
+\end{enumerate}
+
+\section{Equação do saldo devedor}
 
 Para encontrar a equação desse tipo de empréstimo podemos começar escrevendo como o saldo devedor varia com os meses. Veja na tabela \ref{tabSaldo0} que no mês zero, ou seja, no momento do empréstimo, o cliente está devendo apenas e exatamente o que emprestou, $C_0$.
 
